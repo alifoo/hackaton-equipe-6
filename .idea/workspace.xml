@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdff1faa-42b3-49b7-af8f-39add40f7a4c" name="Changes" comment="login error">
+    <list default="true" id="bdff1faa-42b3-49b7-af8f-39add40f7a4c" name="Changes" comment="add login vinc">
       <change afterPath="$PROJECT_DIR$/vite-project/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vite-project/src/components/Auth/GoogleLoginButton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vite-project/src/context/AuthContext.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vite-project/src/services/api.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vite-project/src/services/authService.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/components/LoginScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/components/LoginScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/components/RegisterScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/components/RegisterScreen.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1720375474989</updated>
       <workItem from="1720375476063" duration="12518000" />
-      <workItem from="1720389727606" duration="1596000" />
+      <workItem from="1720389727606" duration="2469000" />
     </task>
     <task id="LOCAL-00001" summary="api fake">
       <option name="closed" value="true" />
@@ -159,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720389691172</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add login vinc">
+      <option name="closed" value="true" />
+      <created>1720391502087</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720391502087</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +171,7 @@
     <MESSAGE value="api fake" />
     <MESSAGE value="create api project" />
     <MESSAGE value="login error" />
-    <option name="LAST_COMMIT_MESSAGE" value="login error" />
+    <MESSAGE value="add login vinc" />
+    <option name="LAST_COMMIT_MESSAGE" value="add login vinc" />
   </component>
 </project>
