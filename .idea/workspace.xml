@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdff1faa-42b3-49b7-af8f-39add40f7a4c" name="Changes" comment="add register">
-      <change afterPath="$PROJECT_DIR$/vite-project/.env" afterDir="false" />
+    <list default="true" id="bdff1faa-42b3-49b7-af8f-39add40f7a4c" name="Changes" comment="adjust register">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/components/LoginScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/components/LoginScreen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/components/RegisterScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/components/RegisterScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/components/UserLandingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/components/UserLandingPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/context/AuthContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/context/AuthContext.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1720375474989</updated>
       <workItem from="1720375476063" duration="12518000" />
-      <workItem from="1720389727606" duration="3254000" />
+      <workItem from="1720389727606" duration="4039000" />
     </task>
     <task id="LOCAL-00001" summary="api fake">
       <option name="closed" value="true" />
@@ -170,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720392515713</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="adjust register">
+      <option name="closed" value="true" />
+      <created>1720393177152</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720393177152</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +189,7 @@
     <MESSAGE value="login error" />
     <MESSAGE value="add login vinc" />
     <MESSAGE value="add register" />
-    <option name="LAST_COMMIT_MESSAGE" value="add register" />
+    <MESSAGE value="adjust register" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust register" />
   </component>
 </project>

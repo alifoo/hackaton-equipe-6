@@ -1,21 +1,31 @@
 import React from "react";
 import logo from "../assets/images/logo.png"; // Adjust this path if needed
-import profilePic from "../assets/images/profile-pic.png"; // Adjust this path if needed
+import profilePic from "../assets/images/profile-pic.png";
+import {useAuth} from "../context/AuthContext.jsx"; // Adjust this path if needed
 
 function UserLandingPage() {
+  const { user } = useAuth();
+
+  if (!user) {
+    return <div>Loading...</div>;
+  }
+
+  const defaultImage = 'https://via.placeholder.com/150';
+
   return (
     <div className="flex flex-col pb-20 bg-white">
       <header className="flex justify-between items-center py-4 px-8 bg-white shadow-md">
         <div className="flex items-center gap-4">
           <img
             loading="lazy"
-            src={profilePic}
+            src={user.image || defaultImage}
             className="w-14 h-14 rounded-full"
             alt="User"
           />
           <div>
-            <div className="font-medium text-neutral-800">Eduarda Alencar</div>
+            <div className="font-medium text-neutral-800">{user.name}</div>
             <div className="text-sm font-bold text-neutral-700">Paciente</div>
+            <div className="text-sm font-bold text-neutral-700">{user.email}</div>
           </div>
         </div>
         <nav className="flex gap-8 text-lg font-medium">
