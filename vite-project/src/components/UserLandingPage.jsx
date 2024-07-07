@@ -1,18 +1,19 @@
 import React from "react";
 import logo from "../assets/images/logo.png"; // Adjust this path if needed
-import profilePic from "../assets/images/profile-pic.png";
+import profilePic from "../assets/images/profile-pic.png"; // Adjust this path if needed
 import {useAuth} from "../context/AuthContext.jsx"; // Adjust this path if needed
 
+
 function UserLandingPage() {
-  const { user } = useAuth();
+    const { user } = useAuth();
 
-  if (!user) {
-    return <div>Loading...</div>;
-  }
+    if (!user) {
+        return <div>Loading...</div>;
+    }
 
-  const defaultImage = 'https://via.placeholder.com/150';
+    const defaultImage = 'https://via.placeholder.com/150';
 
-  return (
+    return (
     <div className="flex flex-col pb-20 bg-white">
       <header className="flex justify-between items-center py-4 px-8 bg-white shadow-md">
         <div className="flex items-center gap-4">
@@ -23,16 +24,15 @@ function UserLandingPage() {
             alt="User"
           />
           <div>
-            <div className="font-medium text-neutral-800">{user.name}</div>
+            <div className="font-medium text-neutral-800">Eduarda Alencar</div>
             <div className="text-sm font-bold text-neutral-700">Paciente</div>
-            <div className="text-sm font-bold text-neutral-700">{user.email}</div>
           </div>
         </div>
         <nav className="flex gap-8 text-lg font-medium">
           <a href="#" className="text-emerald-400 font-extrabold">Página Inicial</a>
           <a href="#">Encontre seu psicólogo</a>
           <a href="#">Comunidade</a>
-          <a href="#">Artigos</a>
+          <a href="#">Minhas consultas</a>
         </nav>
       </header>
 

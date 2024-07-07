@@ -3,6 +3,7 @@ import profilePic from "../assets/images/profile-pic.png";
 import { FaChevronDown, FaStar } from "react-icons/fa";
 import med1 from "../assets/images/med1.png";
 import med2 from "../assets/images/med2.png";
+import { Link } from "react-router-dom";
 
 function AcharPsicologoPart2() {
   return (
@@ -18,7 +19,7 @@ function AcharPsicologoPart2() {
               description="Tenho 26 anos, sendo 3 de formação. Atendo pela abordagem Cognitivo-Comportamental, com foco no tratamento de ansiedade, depressão e autoconhecimento, além de possuir experiência com o público LGBTQIAP+."
               approach="Terapia Cognitivo Comportamental - TCC"
               imgSrc={med1}
-              availableTimes={[
+              schedule={[
                 { day: "Segunda", times: ["15:00", "16:00"] },
                 { day: "Quarta", times: ["14:00", "17:00"] },
                 { day: "Quinta", times: ["15:30", "18:00"] },
@@ -30,10 +31,10 @@ function AcharPsicologoPart2() {
               description="Sou Psicóloga formada desde 2016, especialista em Terapia Cognitiva Comportamental (TCC), tenho experiências em diversas demandas, tais como ansiedade, depressão, insegurança, autoestima, entre outros..."
               approach="Terapia Cognitivo Comportamental - TCC"
               imgSrc={med2}
-              availableTimes={[
-                { day: "Segunda", times: ["15:00", "16:00"] },
-                { day: "Quarta", times: ["14:00", "17:00"] },
-                { day: "Quinta", times: ["15:30", "18:00"] },
+              schedule={[
+                { day: "Terça", times: ["10:00", "11:00"] },
+                { day: "Quinta", times: ["14:00", "16:00"] },
+                { day: "Sexta", times: ["09:00", "12:00"] },
               ]}
             />
           </div>
@@ -92,8 +93,9 @@ const SectionTitle = ({ title, subTitle }) => (
   </div>
 );
 
-const ProfileCard = ({ name, rating, description, approach, imgSrc, availableTimes }) => {
+const ProfileCard = ({ name, rating, description, approach, imgSrc, schedule }) => {
   const [expanded, setExpanded] = useState(false);
+  const [selectedTime, setSelectedTime] = useState("");
 
   return (
     <div className="flex flex-col px-6 py-4 mt-8 rounded-2xl border border-emerald-400 max-md:px-4 max-md:mt-6">
@@ -113,41 +115,39 @@ const ProfileCard = ({ name, rating, description, approach, imgSrc, availableTim
       </div>
       <div className="mt-4 text-lg font-semibold text-black">Abordagem: {approach}</div>
       <div className="mt-2 text-base text-black">{description}</div>
-      <button 
+      <button
         className="self-start px-6 py-2 mt-4 text-base leading-7 text-center text-white bg-emerald-400 rounded-2xl"
         onClick={() => setExpanded(!expanded)}
       >
         Saiba Mais
       </button>
-      {expanded && <ProfileDetails availableTimes={availableTimes} />}
+      {expanded && (
+        <div className="mt-6">
+          <div className="text-xl font-bold text-emerald-400">Datas e horários disponíveis</div>
+          {schedule.map((item, index) => (
+            <div key={index} className="flex gap-5 mt-4 mb-4">
+              <div className="px-4 py-2 text-white bg-emerald-400 rounded-2xl">{item.day}</div>
+              <div className="flex gap-2">
+                {item.times.map((time, idx) => (
+                  <button
+                    key={idx}
+                    className={`px-4 py-2 border-2 rounded-2xl ${selectedTime === time ? "bg-emerald-400 text-white" : "border-stone-300"}`}
+                    onClick={() => setSelectedTime(time)}
+                  >
+                    {time}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
+          <Link to="/confirmation" className="self-end px-8 py-3 mt-6 text-base font-bold text-white bg-emerald-400 rounded-2xl align-bottom">
+            Marcar consulta
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
-
-const ProfileDetails = ({ availableTimes }) => (
-  <div className="flex flex-col px-5 mt-6 text-xl font-bold leading-9 max-w-[474px]">
-    <div className="w-full text-emerald-400">
-      Datas e horarios disponiveis
-    </div>
-    {availableTimes.map((schedule, index) => (
-      <div className="flex gap-5 mt-4 text-center whitespace-nowrap" key={index}>
-        <div className="justify-center px-8 py-4 text-white bg-emerald-400 rounded-2xl">
-          {schedule.day}
-        </div>
-        <div className="flex flex-auto gap-2.5 text-emerald-400">
-          {schedule.times.map((time, idx) => (
-            <div key={idx} className="justify-center px-12 py-5 bg-white rounded-2xl border-solid border-[3px] border-stone-300">
-              {time}
-            </div>
-          ))}
-        </div>
-      </div>
-    ))}
-    <button className="self-end px-6 py-2 mt-8 text-base leading-7 text-center text-white bg-emerald-400 rounded-2xl">
-      Entre em Contato
-    </button>
-  </div>
-);
 
 const SearchSection = ({ title, options }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
