@@ -1,5 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {AuthProvider} from './context/AuthContext';
+
 import MainPage from './components/MainPage';
 import LoginScreen from './components/LoginScreen';
 import RegisterScreen from './components/RegisterScreen';
@@ -11,19 +13,20 @@ import ConfirmationScreen from './components/ConfirmationScreen';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/login" element={<LoginScreen />} />
-        <Route path="/register" element={<RegisterScreen />} />
-        <Route path="/user-page" element={<UserLandingPage />} />
-        <Route path="/community-page" element={<CommunityPage />} />
-        <Route path="/achar-psicologo" element={<AcharPsicologo />} />
-        <Route path="/achar-psicologo-2" element={<AcharPsicologoPart2 />} />
-        <Route path="/confirmation" element={<ConfirmationScreen />} />
-      </Routes>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/login" element={<LoginScreen />} />
+          <Route path="/register" element={<RegisterScreen />} />
+          <Route path="/user-page" element={<UserLandingPage />} />
+          <Route path="/community-page" element={<CommunityPage />} />
+          <Route path="/achar-psicologo" element={<AcharPsicologo />} />
+          <Route path="/achar-psicologo-2" element={<AcharPsicologoPart2 />} />
+          <Route path="/confirmation" element={<ConfirmationScreen />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
-}
 
 export default App;
