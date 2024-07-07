@@ -24,8 +24,9 @@ function UserLandingPage() {
             alt="User"
           />
           <div>
-            <div className="font-medium text-neutral-800">Eduarda Alencar</div>
+            <div className="font-medium text-neutral-800">{user.name}</div>
             <div className="text-sm font-bold text-neutral-700">Paciente</div>
+            <div className="text-sm font-bold text-neutral-700">user.email</div>
           </div>
         </div>
         <nav className="flex gap-8 text-lg font-medium">
