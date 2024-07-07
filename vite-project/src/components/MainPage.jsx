@@ -1,6 +1,7 @@
 import React from "react";
 import picture from "../assets/images/main-photo.png";
 import logo from "../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 function MainPage() {
   return (
@@ -14,7 +15,7 @@ function MainPage() {
                 src={logo}
                 className="shrink-0 self-start aspect-[1.1] fill-white w-[82px] mt-5"
               />
-              <div className="flex-auto self-end mt-7 max-md:max-w-full max-md:text-4xl">
+              <div className="flex-auto self-end mt-7 mb-8 max-md:max-w-full max-md:text-4xl">
                 <span className="font-extrabold">Psicou</span>, seu Amigoterapia.
               </div>
             </div>
@@ -26,12 +27,12 @@ function MainPage() {
               todos.
             </p>
             <div className="flex gap-3 mt-8 text-lg font-bold text-center max-md:flex-wrap max-md:mt-5">
-              <button className="px-20 py-3 text-cyan-700 bg-white rounded-full w-fit max-md:px-3 mr-8">
+              <Link to="/login" className="px-24 py-3 mr-4 text-cyan-700 bg-white rounded-full w-fit max-md:px-3">
                 Login
-              </button>
-              <button className="px-20 py-3 text-white bg-cyan-700 rounded-full w-fit max-md:px-3">
+              </Link>
+              <Link to="/register" className="px-20 py-3 text-white bg-cyan-700 rounded-full w-fit max-md:px-3">
                 Cadastrar
-              </button>
+              </Link>
             </div>
             <div className="mt-6 text-lg font-extrabold tracking-tight text-white underline max-md:mt-5 pt-4">
               <span className="font-medium">É um profissional ou empresa? Faça seu</span>
