@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/images/logo.png"; // Adjust this path if needed
-import profilePic from "../assets/images/profile-pic.png"; // Adjust this path if needed
+import logo from "../assets/images/logo.png";
+import profilePic from "../assets/images/profile-pic.png";
 
 function UserLandingPage() {
   return (
@@ -22,7 +22,7 @@ function UserLandingPage() {
           <a href="#" className="text-emerald-400 font-extrabold">Página Inicial</a>
           <a href="#">Encontre seu psicólogo</a>
           <a href="#">Comunidade</a>
-          <a href="#">Artigos</a>
+          <a href="#">Minhas consultas</a>
         </nav>
       </header>
 

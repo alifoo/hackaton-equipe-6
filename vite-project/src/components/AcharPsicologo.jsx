@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
-import profilePic from "../assets/images/profile-pic.png"; // Adjust this path if needed
+import profilePic from "../assets/images/profile-pic.png";
 
 function AcharPsicologo() {
   return (
@@ -29,7 +29,7 @@ const Header = () => (
       <NavLink text="Página Inicial" />
       <NavLink text="Encontre seu psicólogo" active />
       <NavLink text="Comunidade" />
-      <NavLink text="Artigos" />
+      <NavLink text="Minhas Consultas" />
     </nav>
   </header>
 );
