@@ -8,6 +8,7 @@ function RegisterScreen() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
     const [sexo, setSexo] = useState('Não informado');
     const [cpf, setCpf] = useState('');
     const [nascimento, setNascimento] = useState('');
@@ -16,6 +17,10 @@ function RegisterScreen() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (password !== confirmPassword) {
+            alert('Passwords do not match');
+            return;
+        }
         try {
             const data = await register({ name, email, password, sexo, cpf, nascimento });
             authLogin(data.token);
@@ -85,6 +90,9 @@ function RegisterScreen() {
                         <InputField
                             iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/e7763f0ce2614aaeee44787b2b3cac8a3b10dc88de325b154ad47de51e479a9d?"
                             placeholder="Confirme sua senha"
+                            type="password"
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
                         />
                         <button
                             className="w-full px-8 py-4 text-xl font-bold text-white bg-cyan-600 rounded-full shadow-md">
@@ -107,13 +115,6 @@ const InputField = ({iconSrc, placeholder, value, onChange, type}) => (
             onChange={onChange}
             className="flex-auto text-lg italic bg-transparent outline-none ml-4"
         />
-    </div>
-);
-
-const GenderOption = ({label}) => (
-    <div className="flex items-center space-x-2">
-        <div className="h-6 w-6 border border-cyan-600 rounded-full"></div>
-        <span className="text-lg italic">{label}</span>
     </div>
 );
 

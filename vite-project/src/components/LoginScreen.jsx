@@ -45,7 +45,7 @@ function LoginScreen() {
 
           <div className="flex flex-col justify-center items-center w-1/2 p-16 bg-neutral-100">
             <form onSubmit={handleSubmit}>
-              <h2 className="text-4xl font-bold tracking-tight text-center text-cyan-600">
+              <h2 className="text-4xl font-bold tracking-tight text-center text-cyan-600 mb-5">
 
                 Faça seu <span className="text-cyan-600">Login</span>
               </h2>
@@ -53,8 +53,8 @@ function LoginScreen() {
                 authLogin(token);
                 navigate('/user-page');
               }}/>
-              <div className="w-full max-w-md mt-10">
-                <div className="flex items-center px-6 py-4 bg-stone-300 rounded-full mb-6">
+              <div className="w-full max-w-md mt-5">
+                <div className="flex items-center px-6 py-4 bg-stone-200 rounded-full mb-6">
                   <img
                       loading="lazy"
                       src={cpfIcon}
