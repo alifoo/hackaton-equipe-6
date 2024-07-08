@@ -10,6 +10,7 @@ import CommunityPage from './components/CommunityPage';
 import AcharPsicologo from './components/AcharPsicologo';
 import AcharPsicologoPart2 from './components/AcharPsicologoPart2';
 import ConfirmationScreen from './components/ConfirmationScreen';
+import IframeComponent from './components/IframeComponent';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/achar-psicologo" element={<AcharPsicologo />} />
           <Route path="/achar-psicologo-2" element={<AcharPsicologoPart2 />} />
           <Route path="/confirmation" element={<ConfirmationScreen />} />
+          <Route path="/iframe" element={<IframeComponent />} />
         </Routes>
       </Router>
     </AuthProvider>
