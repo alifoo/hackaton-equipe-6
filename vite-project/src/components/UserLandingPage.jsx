@@ -1,15 +1,7 @@
 import React from "react";
 import logo from "../assets/images/logo.png"; // Adjust this path if needed
-import profilePic from "../assets/images/profile-pic.png"; // Adjust this path if needed
-import {useAuth} from "../context/AuthContext.jsx"; // Adjust this path if needed
-
 
 function UserLandingPage() {
-    const { user } = useAuth();
-
-    if (!user) {
-        return <div>Loading...</div>;
-    }
 
     const defaultImage = 'https://via.placeholder.com/150';
 
@@ -19,18 +11,18 @@ function UserLandingPage() {
         <div className="flex items-center gap-4">
           <img
             loading="lazy"
-            src={user.image || defaultImage}
+            src={defaultImage}
             className="w-14 h-14 rounded-full"
             alt="User"
           />
           <div>
-            <div className="font-medium text-neutral-800">{user.name}</div>
+            <div className="font-medium text-neutral-800">Usuario</div>
             <div className="text-sm font-bold text-neutral-700">Paciente</div>
-            <div className="text-sm font-bold text-neutral-700">{user.email}</div>
+            <div className="text-sm font-bold text-neutral-700">Email Cadastrado</div>
           </div>
         </div>
         <nav className="flex gap-8 text-lg font-medium">
-          <a href="#" className="text-emerald-400 font-extrabold">Página Inicial</a>
+          <a href="/user-page" className="text-emerald-400 font-extrabold">Página Inicial</a>
           <a href="#">Encontre seu psicólogo</a>
           <a href="#">Comunidade</a>
           <a href="#">Minhas consultas</a>
